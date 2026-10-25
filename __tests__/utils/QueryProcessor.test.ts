@@ -43,4 +43,16 @@ describe("QueryProcessor", () => {
         const response: string = QueryProcessor(query);
         expect(response).toBe("https://github.com/akkubais/basic-web-app-f26");
     })
+
+    test('should return the largest number', () => {
+        const query = "Which of the following numbers is the largest: 17, 24, 93?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe("93");
+    })
+
+    test('should add two numbers', () => {
+        const query = "What is 75 plus 90?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe("165");
+    })
 });
