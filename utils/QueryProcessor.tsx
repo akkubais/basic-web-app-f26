@@ -8,6 +8,22 @@ export default function QueryProcessor(query: string): string {
     return "akkubais";
   }
 
+  if (
+    normalizedQuery.includes("github") &&
+    (normalizedQuery.includes("username") ||
+      normalizedQuery.includes("user name"))
+  ) {
+    return "akkubais";
+  }
+
+  if (
+    normalizedQuery.includes("github") &&
+    (normalizedQuery.includes("repository") ||
+      normalizedQuery.includes("repo"))
+  ) {
+    return "https://github.com/akkubais/basic-web-app-f26";
+  }
+
   if (normalizedQuery.includes("shakespeare")) {
     return (
       "William Shakespeare (26 April 1564 - 23 April 1616) was an " +
@@ -17,7 +33,7 @@ export default function QueryProcessor(query: string): string {
   }
 
   if (normalizedQuery.includes("name")) {
-    return "Rohan";
+    return "Abdulaziz";
   }
 
   if (normalizedQuery.includes("age")) {

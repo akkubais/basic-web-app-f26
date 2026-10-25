@@ -22,7 +22,7 @@ describe("QueryProcessor", () => {
         const query = "What is your name?";
         const response: string = QueryProcessor(query);
         expect(response).toBe((
-            "Rohan"
+            "Abdulaziz"
           ));
     })
 
@@ -30,5 +30,17 @@ describe("QueryProcessor", () => {
         const query = "What is your Andrew ID?";
         const response: string = QueryProcessor(query);
         expect(response).toBe("akkubais");
+    })
+
+    test('should return GitHub username', () => {
+        const query = "What is your GitHub username?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe("akkubais");
+    })
+
+    test('should return GitHub repository', () => {
+        const query = "What is your GitHub repository?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe("https://github.com/akkubais/basic-web-app-f26");
     })
 });
